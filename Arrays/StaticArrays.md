@@ -1,4 +1,4 @@
-## Static Arrays
+# Static Arrays
 Arrays with fixed length are `Static Arrays`
 
 We just need index of element to read so the read operation takes `O(1)`
