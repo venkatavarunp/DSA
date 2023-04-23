@@ -22,6 +22,16 @@ def bruteForce(nums):
 ## 2nd Way - Kadane's Algorithm
 We use a window to calculate the current sum of the window and if the sum of the window turns as negative we discard that sum and start to calculate the new sum as there is no use adding negative sum to the next values.
 ```python
+Create winsowsum and maxsum variabales
+loop through every element of array using for loop
+    if(windowsum negative)
+        make windowsum = 0
+        add element to windowsum
+    if(windowsum>maxsum)
+        assign maxsum=windowsum
+return maxsum
+```
+```python
 # Kadane's Algorithm: O(n)
 def kadanes(nums):
     maxSum = nums[0]
