@@ -1,3 +1,12 @@
+# Linked Lists
+Linked lists are similar to array but they are non linear and non contigous data strucure.
+
+Linked Lists is an object that encapsulates minimum of two things
+- Value of list node
+- next listnode address
+
+By using next listnode address we can connect the lists together to form a linked list.
+
 **Python**
 ```python
 class ListNode:
