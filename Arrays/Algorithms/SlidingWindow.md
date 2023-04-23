@@ -34,3 +34,21 @@ loop through array using right pointer till end of array
         total-= left pointer value
         move left pointer by 1
 return 0 if length has hasn't changed else return length of window
+```
+```python
+# Find length of the minimum size subarray where the sum is 
+# greater than or equal to the target.
+# Assume all values in the input are positive.
+# O(n)
+def shortestSubarray(nums, target):
+    L, total = 0, 0
+    length = float("inf")
+    
+    for R in range(len(nums)):
+        total += nums[R]
+        while total >= target:
+            length = min(R - L + 1, length)
+            total -= nums[L]
+            L += 1
+    return 0 if length == float("inf") else length
+ ```
