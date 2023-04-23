@@ -24,3 +24,13 @@ def longestSubarray(nums):
         length = max(length, R - L + 1)
     return length
 ```
+**Finding the minimum length subarray, where the sum is greater than or equal to the target. Assume all values are positive**
+```python
+intiate left pointer, total , length = max integer value 
+loop through array using right pointer till end of array    
+    total += right pointer value
+    while total >= target value
+        length = minimum of (window length, length) 
+        total-= left pointer value
+        move left pointer by 1
+return 0 if length has hasn't changed else return length of window
