@@ -17,3 +17,21 @@ the sorted property is **the elements of left sub tree of a every single node is
 By arranging the tree in BST form we can easily search for the values as the searching operation takes `O(h)` where `h` is `height of the tree`
 
 Removing and adding the elements in BST is complex when compared to searching and takes `O(n)`
+```python
+class TreeNode:
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+
+def search(root, target):
+    if not root:
+        return False
+    
+    if target > root.val:
+        return search(root.right, target)
+    elif target < root.val:
+        return search(root.left, target)
+    else:
+        return True
+```
